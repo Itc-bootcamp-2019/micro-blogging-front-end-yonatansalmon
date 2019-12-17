@@ -5,14 +5,19 @@ class TextBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            textInput: "",
+            tweet: {
+                content: '',
+                date: '',
+                userName: ''    
+            }
+              
         }
     }
 
     handleSubmit = (event) => {
         const onHandleTweet = this.props.onHandleTweet
         event.preventDefault();
-        onHandleTweet(this.state.textInput)
+        onHandleTweet(this.state.tweet)
 
 
     }
@@ -20,7 +25,10 @@ class TextBox extends React.Component {
 
     handleInputChange = (event) => {
         this.setState({
-            textInput: event.target.value
+            tweet: {content: event.target.value,
+            date: '',
+            userName: ''
+        }
         })
     }
 

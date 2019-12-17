@@ -6,26 +6,23 @@ const date = (new Date()).toISOString()
 class TweetList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            date: date,
-            user: "Yonatan"
-        }
 
     }
 
 
     render() {
+        const { tweets } = this.props;
         return (
             <div>{
-                this.props.tweets.map((tweet) => {
+                tweets.map((tweet) => {
                     return ( <div className="tweet">
                                 <div className="user-date">
-                                    <div>{this.state.user}</div>
-                                    <div>{this.state.date}</div>
+                                    <div>{tweet.userName}</div>
+                                    <div>{tweet.date}</div>
                                 </div>
                                 <br></br>
                         
-                               <div className="tweet-message">{tweet}</div>
+                               <div className="tweet-message">{tweet.content}</div>
                                  
                             </div>)
 
