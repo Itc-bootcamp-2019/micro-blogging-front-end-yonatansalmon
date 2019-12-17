@@ -1,5 +1,12 @@
+*{
+  background-color: grey;
+  font-family: Roboto;
+}
 .App {
   text-align: center;
+  padding: 0; 
+
+  
 }
 
 .App-logo {
@@ -35,4 +42,143 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.nav-container{
+  position: absolute;
+  width: 1076px;
+  height: 58px;
+  left: 50px;
+  right:50px ;
+  top: 0px;
+  background: #343a40;
+  border-radius: 6px;
+}
+
+.home-menu{
+position: absolute;
+width: 38px;
+height: 16px;
+left: 120.87px;
+top: 19px;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+background: #343a40;
+color: #FFFFFF;
+}
+
+.profile-menu{
+position: absolute;
+width: 41px;
+height: 16px;
+left: 190.87px;
+top: 19px;
+background: #343a40;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+
+color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+.textbox{
+position: absolute;
+width: 600px;
+height: 180px;
+left: 280px;
+top: 105px;
+border: 2px solid #CCCCCC;
+box-sizing: border-box;
+border-radius: 6px;
+}
+
+.tweet-button{
+  position: absolute;
+  font-family: "Roboto";
+  width: 68px;
+  height: 34px;
+  left: 790px;
+  top: 231px;
+  background: #007BFF;
+  border-radius: 4px;
+
+}
+
+.profile-title{
+position: absolute;
+width: 103px;
+height: 42px;
+left: 369px;
+top: 110px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+
+color: #FFFFFF;
+
+}
+
+
+.users-title{
+position: absolute;
+width: 90px;
+height: 21px;
+left: 368px;
+top: 178px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-input{
+  position: absolute;
+width: 600px;
+height: 61px;
+left: 367px;
+top: 205px;
+color:white;
+border: 2px solid #CCCCCC;
+box-sizing: border-box;
+border-radius: 6px;
+}
+
+.profile-button{
+  position: absolute;
+  width: 68px;
+  height: 34px;
+  left: 889px;
+  top: 282px;
+  
+  background: #007BFF;
+  border-radius: 4px;
+}
+
+
+.tweet{
+
+width: 600px;
+height: 100px;
+left: 367px;
+top: 305px;
+position: relative;
+margin-bottom: 10px;
+
+background: #343A40;
+border-radius: 6px;
 }
