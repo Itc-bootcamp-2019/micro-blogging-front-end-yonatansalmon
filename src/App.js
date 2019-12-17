@@ -12,19 +12,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tweets: [window.localStorage.getItem("Tweet")]
+      tweets: window.localStorage.getItem("Tweets") ? JSON.parse(window.localStorage.getItem("Tweets")):[]
     }
 
   }
 
 
   onHandleTweet = (tweet) => {
-    let savedTweets = this.state.tweets
-    savedTweets.push(tweet)
-    window.localStorage.setItem("Tweet", savedTweets)
-    console.log(savedTweets)
+    let savedTweets = this.state.tweets;
+    const allTweets = [tweet, ...savedTweets]
+    window.localStorage.setItem("Tweets", JSON.stringify(allTweets))
     this.setState((prevState) => {
-      return { tweets: [tweet, ...prevState.tweets] }
+      return { tweets: allTweets }
     })
   }
 
