@@ -181,4 +181,18 @@ display:flex;
 flex-direction: column;
 background: #343A40;
 border-radius: 6px;
+color:white;
+
+}
+
+
+.user-date{
+  display:flex;
+  justify-content: space-between;
+  color:grey
+}
+
+
+.tweet-message{
+  align-self: left;
 }

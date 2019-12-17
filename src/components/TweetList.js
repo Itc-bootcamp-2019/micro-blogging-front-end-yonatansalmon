@@ -19,10 +19,13 @@ class TweetList extends React.Component {
             <div>{
                 this.props.tweets.map((tweet) => {
                     return ( <div className="tweet">
-                        <div>{tweet}</div>
-                        <div>{this.state.date}</div>
-                        <div>{this.state.user}</div>
-                               
+                                <div className="user-date">
+                                    <div>{this.state.user}</div>
+                                    <div>{this.state.date}</div>
+                                </div>
+                                <br></br>
+                        
+                               <div className="tweet-message">{tweet}</div>
                                  
                             </div>)
 
