@@ -1,5 +1,5 @@
 *{
-  background-color: grey;
+
   font-family: Roboto;
 }
 .App {
@@ -169,7 +169,6 @@ border-radius: 6px;
   border-radius: 4px;
 }
 
-
 .tweet{
 
 width: 600px;
@@ -178,7 +177,8 @@ left: 367px;
 top: 305px;
 position: relative;
 margin-bottom: 10px;
-
+display:flex;
+flex-direction: column;
 background: #343A40;
 border-radius: 6px;
 }

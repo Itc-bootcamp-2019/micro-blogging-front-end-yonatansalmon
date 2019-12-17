@@ -1,11 +1,15 @@
 import React from 'react';
 import TweetList from "./TweetList"
 
+
+
 class TextBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             textInput: "",
+            
+           
         }
     }
 
@@ -20,7 +24,8 @@ class TextBox extends React.Component {
 
     handleInputChange = (event) => {
         this.setState({
-            textInput: event.target.value
+            textInput: event.target.value,
+       
         })
     }
 
