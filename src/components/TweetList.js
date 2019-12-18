@@ -13,8 +13,8 @@ class TweetList extends React.Component {
           return (
             <div className="tweet">
               <div className="user-date">
-                <div>{tweet.userName}</div>
-                <div>{tweet.date}</div>
+                <div className="grey">{tweet.userName}</div>
+                <div className="grey">{tweet.date}</div>
               </div>
               <br></br>
               <div className="tweet-message">{tweet.content}</div>

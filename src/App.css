@@ -1,10 +1,10 @@
-*{
-
+* {
   font-family: Roboto;
+  background-color: #15202b;
 }
 .App {
   text-align: center;
-  padding: 0; 
+  padding: 0;
 }
 
 .App-logo {
@@ -42,156 +42,153 @@
   }
 }
 
-
-.nav-container{
+.nav-container {
   position: absolute;
   width: 1076px;
   height: 58px;
-  left: 50px;
-  right:50px ;
+  left: 100px;
+  right: 50px;
   top: 0px;
   background: #343a40;
   border-radius: 6px;
 }
 
-.home-menu{
-position: absolute;
-width: 38px;
-height: 16px;
-left: 120.87px;
-top: 19px;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
-display: flex;
-align-items: center;
-background: #343a40;
-color: #FFFFFF;
+.home-menu {
+  position: absolute;
+  width: 38px;
+  height: 16px;
+  left: 120.87px;
+  top: 19px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  background: #343a40;
+  color: #ffffff;
 }
 
-.profile-menu{
-position: absolute;
-width: 41px;
-height: 16px;
-left: 190.87px;
-top: 19px;
-background: #343a40;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
-display: flex;
-align-items: center;
-
-color: rgba(255, 255, 255, 0.5);
-
+.profile-menu {
+  position: absolute;
+  width: 41px;
+  height: 16px;
+  left: 190.87px;
+  top: 19px;
+  background: #343a40;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-
-.textbox{
-position: absolute;
-width: 600px;
-height: 180px;
-left: 280px;
-top: 105px;
-border: 2px solid #CCCCCC;
-box-sizing: border-box;
-border-radius: 6px;
+.textbox {
+  position: absolute;
+  width: 600px;
+  height: 180px;
+  left: 320px;
+  top: 105px;
+  border: 2px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: white;
+  font-size: 19px;
+  padding: 10px 10px;
 }
 
-.tweet-button{
+.tweet-button {
   position: absolute;
   font-family: "Roboto";
   width: 68px;
   height: 34px;
-  left: 790px;
-  top: 231px;
-  background: #007BFF;
+  left: 840px;
+  top: 241px;
+  background: #007bff;
   border-radius: 4px;
-
 }
 
-.profile-title{
-position: absolute;
-width: 103px;
-height: 42px;
-left: 369px;
-top: 110px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 42px;
-
-color: black
-
+.profile-title {
+  position: absolute;
+  width: 103px;
+  height: 42px;
+  left: 369px;
+  top: 110px;
+  color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
 }
 
-
-.users-title{
-position: absolute;
-width: 90px;
-height: 21px;
-left: 368px;
-top: 178px;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-color: black
+.users-title {
+  position: absolute;
+  width: 90px;
+  height: 21px;
+  left: 368px;
+  top: 178px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
 }
 
-.profile-input{
-position: absolute;
-width: 600px;
-height: 61px;
-left: 367px;
-top: 205px;
-color:black;
-border: 2px solid #CCCCCC;
-box-sizing: border-box;
-border-radius: 6px;
-font-size: 22px;
+.profile-input {
+  position: absolute;
+  width: 600px;
+  height: 61px;
+  left: 367px;
+  top: 205px;
+  color: white;
+  border: 2px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 22px;
 }
 
-.profile-button{
+.profile-button {
   position: absolute;
   width: 68px;
   height: 34px;
   left: 889px;
   top: 282px;
-  
-  background: #007BFF;
+
+  background: #007bff;
   border-radius: 4px;
 }
 
-.tweet{
-
-width: 600px;
-height: 100px;
-left: 280px;
-top: 305px;
-position: relative;
-margin-bottom: 10px;
-display:flex;
-flex-direction: column;
-background: #343A40;
-border-radius: 6px;
-color:white;
-
+.tweet {
+  width: 600px;
+  height: 100px;
+  left: 320px;
+  top: 305px;
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #343a40;
+  border-radius: 6px;
+  color: white;
 }
 
-
-.user-date{
-  display:flex;
+.user-date {
+  display: flex;
   justify-content: space-between;
-  color:grey
+  background: #343a40;
+  padding: 5px 10px;
 }
 
+.tweet-message {
+  text-align: left;
+  background: #343a40;
+  padding: 5px 10px;
+}
 
-.tweet-message{
-  align-self: left;
+.grey {
+  background: #343a40;
 }
