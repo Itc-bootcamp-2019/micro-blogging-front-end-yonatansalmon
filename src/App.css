@@ -125,7 +125,7 @@ font-weight: normal;
 font-size: 36px;
 line-height: 42px;
 
-color: #FFFFFF;
+color: black
 
 }
 
@@ -141,19 +141,20 @@ font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 21px;
-color: rgba(255, 255, 255, 0.8);
+color: black
 }
 
 .profile-input{
-  position: absolute;
+position: absolute;
 width: 600px;
 height: 61px;
 left: 367px;
 top: 205px;
-color:white;
+color:black;
 border: 2px solid #CCCCCC;
 box-sizing: border-box;
 border-radius: 6px;
+font-size: 22px;
 }
 
 .profile-button{

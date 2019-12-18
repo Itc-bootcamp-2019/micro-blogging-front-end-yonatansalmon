@@ -8,7 +8,7 @@ class TextBox extends React.Component {
       tweet: {
         content: "",
         date: "",
-        userName: "", 
+        userName: "",
       }
     };
   }
@@ -20,7 +20,7 @@ class TextBox extends React.Component {
   };
 
   handleInputChange = event => {
-    this.setState({tweet: { content: event.target.value} });
+    this.setState({ tweet: { content: event.target.value } });
   };
 
   render() {

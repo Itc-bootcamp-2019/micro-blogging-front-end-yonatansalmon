@@ -24,19 +24,18 @@ class App extends React.Component {
 
   componentDidMount() {
     getTweet().then(response =>
-      this.setState({ tweets: response.data.tweets,  loading: false })
+      this.setState({ tweets: response.data.tweets, loading: false })
     );
   }
 
   componentWillUnmount() {}
 
   onHandleTweet = tweet => {
-    tweet.userName = "Yonatan";
+    tweet.userName = window.localStorage.getItem("Username")
     tweet.date = new Date().toISOString();
     postTweet(tweet).catch(error => alert("ERROR"));
     const { tweets } = this.state;
     this.setState({ tweets: [tweet, ...tweets] });
-   
   };
 
   render() {
@@ -50,10 +49,9 @@ class App extends React.Component {
               <TextBox tweets={tweets} onHandleTweet={this.onHandleTweet} />
               {loading && <div className="tweet">loading...</div>}
               {!loading && <TweetList tweets={tweets} />}
-         
             </Route>
             <Route path="/profile">
-              <Profile></Profile>
+              <Profile onHandleTweet={this.onHandleTweet}></Profile>
             </Route>
           </Switch>
         </Router>
