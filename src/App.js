@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Switch,
-  Link,
-  Route,
-  BrowserRouter as Router,
-  useParams
-} from "react-router-dom";
+import {Switch,Link,Route,BrowserRouter as Router,useParams} from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextBox from "./components/TextBox";
@@ -18,7 +12,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       tweets: [],
-      loading: true
+      loading: true,
+      addTweet: this.onHandleTweet.bind(this)
+
     };
   }
 
@@ -46,9 +42,11 @@ class App extends React.Component {
           <Navbar></Navbar>
           <Switch>
             <Route exact path="/">
+            <MyAppContext.Provider value={this.state}>
               <TextBox tweets={tweets} onHandleTweet={this.onHandleTweet} />
               {loading && <div className="tweet">loading...</div>}
               {!loading && <TweetList tweets={tweets} />}
+              </MyAppContext.Provider>
             </Route>
             <Route path="/profile">
               <Profile onHandleTweet={this.onHandleTweet}></Profile>

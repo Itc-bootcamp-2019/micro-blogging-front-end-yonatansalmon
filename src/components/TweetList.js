@@ -8,20 +8,22 @@ class TweetList extends React.Component {
   render() {
     const { tweets } = this.props;
     return (
+      <MyAppContext.Consumer>
       <div>
-        {tweets.map(tweet => {
+        {tweets.map(tweet => {        
           return (
-            <div className="tweet">
-              <div className="user-date">
-                <div className="grey">{tweet.userName}</div>
-                <div className="grey">{tweet.date}</div>
+              <div className="tweet">
+                <div className="user-date">
+                  <div className="grey">{tweet.userName}</div>
+                  <div className="grey">{tweet.date}</div>
+                </div>
+                <br></br>
+                <div className="tweet-message">{tweet.content}</div>
               </div>
-              <br></br>
-              <div className="tweet-message">{tweet.content}</div>
-            </div>
           );
         })}
       </div>
+      </MyAppContext.Consumer>
     );
   }
 }

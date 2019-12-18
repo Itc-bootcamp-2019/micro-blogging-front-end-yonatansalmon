@@ -1,5 +1,4 @@
 import React from "react";
-import TweetList from "./TweetList";
 
 class TextBox extends React.Component {
   constructor(props) {
@@ -8,16 +7,10 @@ class TextBox extends React.Component {
       tweet: {
         content: "",
         date: "",
-        userName: "",
+        userName: ""
       }
     };
   }
-
-  handleSubmit = event => {
-    const onHandleTweet = this.props.onHandleTweet;
-    event.preventDefault();
-    onHandleTweet(this.state.tweet);
-  };
 
   handleInputChange = event => {
     this.setState({ tweet: { content: event.target.value } });
@@ -25,16 +18,23 @@ class TextBox extends React.Component {
 
   render() {
     return (
-      <form>
-        <textarea
-          className="textbox"
-          onChange={this.handleInputChange}
-          maxLength="140"
-        ></textarea>
-        <button className="tweet-button" onClick={this.handleSubmit}>
-          Tweet
-        </button>
-      </form>
+      <MyAppContext.Consumer>
+        {context => (
+          <form>
+            <textarea
+              className="textbox"
+              onChange={this.handleInputChange}
+              maxLength="140"
+            ></textarea>
+            <button
+              className="tweet-button"
+              onClick={() => context.addTweet(tweet)}
+            >
+              Tweet
+            </button>
+          </form>
+        )}
+      </MyAppContext.Consumer>
     );
   }
 }
