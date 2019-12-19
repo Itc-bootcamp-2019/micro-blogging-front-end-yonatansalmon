@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const MyContext = React.createContext({
   tweets: [],
-  addTweet: (tweet) => { }
+  loading: null,
+  addTweet: tweet => {}
 });
 
 export default MyContext;

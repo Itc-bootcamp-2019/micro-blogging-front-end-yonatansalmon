@@ -1,11 +1,18 @@
 import React from "react";
-import {Switch,Link,Route,BrowserRouter as Router,useParams} from "react-router-dom";
+import {
+  Switch,
+  Link,
+  Route,
+  BrowserRouter as Router,
+  useParams
+} from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextBox from "./components/TextBox";
 import Profile from "./components/Profile";
 import TweetList from "./components/TweetList";
 import { getTweet, postTweet } from "./lib/api";
+import MyContext from "./context/MyContext";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +21,6 @@ class App extends React.Component {
       tweets: [],
       loading: true,
       addTweet: this.onHandleTweet.bind(this)
-
     };
   }
 
@@ -27,11 +33,16 @@ class App extends React.Component {
   componentWillUnmount() {}
 
   onHandleTweet = tweet => {
-    tweet.userName = window.localStorage.getItem("Username")
+    console.log("onhandletweet");
+    tweet.userName = window.localStorage.getItem("Username");
     tweet.date = new Date().toISOString();
-    postTweet(tweet).catch(error => alert("ERROR"));
-    const { tweets } = this.state;
-    this.setState({ tweets: [tweet, ...tweets] });
+    console.log("for posting", tweet);
+    postTweet(tweet)
+      .then(response => {
+        const { tweets } = this.state;
+        this.setState({ tweets: [tweet, ...tweets] });
+      })
+      .catch(error => alert("ERROR"));
   };
 
   render() {
@@ -42,11 +53,11 @@ class App extends React.Component {
           <Navbar></Navbar>
           <Switch>
             <Route exact path="/">
-            <MyAppContext.Provider value={this.state}>
-              <TextBox tweets={tweets} onHandleTweet={this.onHandleTweet} />
-              {loading && <div className="tweet">loading...</div>}
-              {!loading && <TweetList tweets={tweets} />}
-              </MyAppContext.Provider>
+              <MyContext.Provider value={this.state}>
+                <TextBox />
+                {loading && <div className="tweet">loading...</div>}
+                {!loading && <TweetList />}
+              </MyContext.Provider>
             </Route>
             <Route path="/profile">
               <Profile onHandleTweet={this.onHandleTweet}></Profile>

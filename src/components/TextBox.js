@@ -1,4 +1,6 @@
 import React from "react";
+import TweetList from "./TweetList";
+import MyContext from "../context/MyContext";
 
 class TextBox extends React.Component {
   constructor(props) {
@@ -12,29 +14,30 @@ class TextBox extends React.Component {
     };
   }
 
+
   handleInputChange = event => {
-    this.setState({ tweet: { content: event.target.value } });
+    this.setState({ tweet: { content: event.target.value } }, () => {
+      console.log("from handleInputChange", this.state.tweet);
+    });
   };
 
   render() {
+    const { tweet } = this.state;
     return (
-      <MyAppContext.Consumer>
-        {context => (
-          <form>
+      <MyContext.Consumer>
+        {({ addTweet, tweets }) => (
+          <div>
             <textarea
               className="textbox"
               onChange={this.handleInputChange}
               maxLength="140"
             ></textarea>
-            <button
-              className="tweet-button"
-              onClick={() => context.addTweet(tweet)}
-            >
+            <button className="tweet-button" onClick={() => addTweet(tweet)}>
               Tweet
             </button>
-          </form>
+          </div>
         )}
-      </MyAppContext.Consumer>
+      </MyContext.Consumer>
     );
   }
 }
