@@ -1,6 +1,7 @@
 import React from "react";
 import TweetList from "./TweetList";
 import MyContext from "../context/MyContext";
+import Profile from "./Profile";
 
 class TextBox extends React.Component {
   constructor(props) {
@@ -14,14 +15,14 @@ class TextBox extends React.Component {
     };
   }
 
-
   handleInputChange = event => {
     this.setState({ tweet: { content: event.target.value } }, () => {
-      console.log("from handleInputChange", this.state.tweet);
+      console.log(this.state.tweet.content.length);
     });
   };
 
   render() {
+    let tweetLength = this.state.tweet.content.length;
     const { tweet } = this.state;
     return (
       <MyContext.Consumer>
@@ -30,9 +31,18 @@ class TextBox extends React.Component {
             <textarea
               className="textbox"
               onChange={this.handleInputChange}
-              maxLength="140"
+              length="140"
             ></textarea>
-            <button className="tweet-button" onClick={() => addTweet(tweet)}>
+            {tweetLength > 140 && (
+              <div className="tooManyChars">
+                The tweet can't contain more than 140 chars.
+              </div>
+            )}
+            <button
+              className="tweet-button"
+              disabled={tweetLength > 140}
+              onClick={() => addTweet(tweet)}
+            >
               Tweet
             </button>
           </div>

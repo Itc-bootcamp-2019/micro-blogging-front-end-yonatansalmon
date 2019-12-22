@@ -25,18 +25,20 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.allTweets();
+    setInterval(() => this.allTweets(), 5000);
+  }
+
+  allTweets = () =>
     getTweet().then(response =>
       this.setState({ tweets: response.data.tweets, loading: false })
     );
-  }
 
   componentWillUnmount() {}
 
   onHandleTweet = tweet => {
-    console.log("onhandletweet");
     tweet.userName = window.localStorage.getItem("Username");
     tweet.date = new Date().toISOString();
-    console.log("for posting", tweet);
     postTweet(tweet)
       .then(response => {
         const { tweets } = this.state;

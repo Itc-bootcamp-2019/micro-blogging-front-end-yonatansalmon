@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Switch,
-  Link,
-  Route,
-  BrowserRouter as Router,
-  useParams
-} from "react-router-dom";
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userName: ""
+      userName: window.localStorage.getItem("Username")
     };
   }
 
@@ -28,18 +21,24 @@ class Profile extends React.Component {
 
   render() {
     return (
-      <form>
-        <h1 className="profile-title">Profile</h1>
-        <div className="users-title">User Name</div>
-        <input
-          className="profile-input"
-          type="text"
-          onChange={this.handleProfileInput}
-        ></input>
-        <button className="profile-button" onClick={this.handleUsernameSubmit}>
-          Save
-        </button>
-      </form>
+      <div>
+        <form>
+          <h1 className="profile-title">Profile</h1>
+          <div className="users-title">User Name</div>
+          <input
+            className="profile-input"
+            type="text"
+            onChange={this.handleProfileInput}
+          ></input>
+          <button
+            className="profile-button"
+            onClick={this.handleUsernameSubmit}
+          >
+            Save
+          </button>
+        </form>
+        <h1 className="current-profile">Current profile: {this.state.userName} </h1>
+      </div>
     );
   }
 }

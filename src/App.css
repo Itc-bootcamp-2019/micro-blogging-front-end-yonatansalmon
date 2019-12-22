@@ -82,7 +82,7 @@
   line-height: 16px;
   display: flex;
   align-items: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
 }
 
 .textbox {
@@ -157,7 +157,6 @@
   height: 34px;
   left: 889px;
   top: 282px;
-
   background: #007bff;
   border-radius: 4px;
 }
@@ -177,6 +176,7 @@
 }
 
 .user-date {
+  width: 95%;
   display: flex;
   justify-content: space-between;
   background: #343a40;
@@ -184,11 +184,42 @@
 }
 
 .tweet-message {
+  width:95%; 
+  height:500px; 
   text-align: left;
   background: #343a40;
   padding: 5px 10px;
+  overflow-wrap:break-word ;
 }
 
 .grey {
   background: #343a40;
+}
+
+.current-profile {
+  color: green;
+  position: absolute;
+  top: 300px;
+  left: 373px;
+  display: inline;
+}
+
+.tooManyChars{
+  position: absolute;
+  width: 330px;
+  height: 15px;
+  left: 350px;
+  top: 250px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: red;
+
 }
