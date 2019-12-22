@@ -37,7 +37,7 @@ class Profile extends React.Component {
             Save
           </button>
         </form>
-        <h1 className="current-profile">Current profile: {this.state.userName} </h1>
+        <h3 className="current-profile">Current profile: <h3 className ="myCurrentProfile">{this.state.userName} </h3> </h3>
       </div>
     );
   }

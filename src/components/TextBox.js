@@ -32,7 +32,10 @@ class TextBox extends React.Component {
               className="textbox"
               onChange={this.handleInputChange}
               length="140"
-            ></textarea>
+              placeholder="Write your message here.."
+              placeholderTextColor="white"
+            >
+            </textarea>
             {tweetLength > 140 && (
               <div className="tooManyChars">
                 The tweet can't contain more than 140 chars.
