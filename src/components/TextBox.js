@@ -17,7 +17,6 @@ class TextBox extends React.Component {
 
   handleInputChange = event => {
     this.setState({ tweet: { content: event.target.value } }, () => {
-      console.log(this.state.tweet.content.length);
     });
   };
 

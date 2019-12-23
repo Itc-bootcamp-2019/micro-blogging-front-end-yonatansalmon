@@ -34,7 +34,6 @@ class App extends React.Component {
       this.setState({ tweets: response.data.tweets, loading: false })
     );
 
-  componentWillUnmount() {}
 
   onHandleTweet = tweet => {
     tweet.userName = window.localStorage.getItem("Username");

@@ -16,7 +16,7 @@ class Profile extends React.Component {
 
   handleProfileInput = event => {
     this.setState({ userName: event.target.value });
-    console.log(this.state.userName);
+
   };
 
   render() {
@@ -24,12 +24,13 @@ class Profile extends React.Component {
       <div>
         <form>
           <h1 className="profile-title">Profile</h1>
-          <div className="users-title">User Name</div>
+          <div className="users-title">User Name:</div>
           <input
             className="profile-input"
             type="text"
             onChange={this.handleProfileInput}
-          ></input>
+            placeholder="Please choose a username.."
+            ></input>
           <button
             className="profile-button"
             onClick={this.handleUsernameSubmit}

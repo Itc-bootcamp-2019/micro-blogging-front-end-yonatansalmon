@@ -124,8 +124,8 @@
 
 .users-title {
   position: absolute;
-  width: 90px;
-  height: 21px;
+  width: 100px;
+  height: 40px;
   left: 368px;
   top: 178px;
   font-style: normal;
@@ -145,7 +145,7 @@
   border: 2px solid #cccccc;
   box-sizing: border-box;
   border-radius: 6px;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .profile-button {
@@ -159,15 +159,17 @@
 }
 
 .tweet {
-  width: 600px;
-  height: 100px;
-  left: 320px;
+  width:600px;
+  height:100px;
+  left: 314px;
   top: 305px;
   position: relative;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  background: #343a40;
+  justify-content: center;
+  align-items: flex-start; 
+  background: #343a40;;
   border-radius: 6px;
   color: white;
 }
@@ -181,16 +183,19 @@
 }
 
 .tweet-message {
-  width: 95%;
-  height: 500px;
+  height:50px; 
+  width: 570px;
   text-align: left;
-  background: #343a40;
+  background: #343a40;;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 5px 10px;
   overflow-wrap: break-word;
 }
 
 .grey {
-  background: #343a40;
+  background: #343a40;;
 }
 
 .current-profile {
@@ -223,3 +228,4 @@
   display: inline;
   color: green;
 }
+

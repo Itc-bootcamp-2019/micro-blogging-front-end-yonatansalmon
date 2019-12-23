@@ -17,8 +17,7 @@ class TweetList extends React.Component {
                   <div className="grey">{tweet.userName}</div>
                   <div className="grey">{tweet.date}</div>
                 </div>
-                <br></br>
-                <div className="tweet-message">{tweet.content}</div>
+                  <div className="tweet-message">{tweet.content}</div>             
               </div>
             ))}
           </div>
