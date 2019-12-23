@@ -9,7 +9,7 @@ class TweetList extends React.Component {
   render() {
     return (
       <MyContext.Consumer>
-        {({ addTweet, tweets }) => (
+        {({ tweets }) => (
           <div>
             {tweets.map(tweet => (
               <div key={tweet.date + tweet.userName} className="tweet">

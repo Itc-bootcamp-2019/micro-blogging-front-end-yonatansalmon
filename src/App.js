@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Switch,
-  Link,
-  Route,
-  BrowserRouter as Router,
-  useParams
-} from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextBox from "./components/TextBox";
@@ -24,16 +18,19 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.allTweets();
-    setInterval(() => this.allTweets(), 5000);
-  }
-
   allTweets = () =>
     getTweet().then(response =>
       this.setState({ tweets: response.data.tweets, loading: false })
     );
 
+  componentDidMount() {
+    this.allTweets();
+    this.interval = setInterval(() => this.allTweets(), 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
   onHandleTweet = tweet => {
     tweet.userName = window.localStorage.getItem("Username");
@@ -47,7 +44,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { tweets, loading } = this.state;
+    const { loading } = this.state;
     return (
       <div className="App">
         <Router>
