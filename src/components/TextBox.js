@@ -25,14 +25,14 @@ class TextBox extends React.Component {
     const { tweet } = this.state;
     return (
       <MyContext.Consumer>
-        {({ addTweet, tweets }) => (
+        {({ addTweet }) => (
           <div>
             <textarea
               className="textbox"
               onChange={this.handleInputChange}
               length="140"
-              placeholder="Write your message here.."
-              placeholderTextColor="white"
+              placeholder="What do you have in mind..."
+             
             >
             </textarea>
             {tweetLength > 140 && (

@@ -1,5 +1,5 @@
 * {
-  font-family:'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #15202b;
 }
 .App {
@@ -66,6 +66,11 @@
   display: flex;
   align-items: center;
   background: #343a40;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.home-menu:active {
   color: #ffffff;
 }
 
@@ -82,6 +87,11 @@
   line-height: 16px;
   display: flex;
   align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.profile-menu:active {
   color: #ffffff;
 }
 
@@ -94,8 +104,8 @@
   border: 2px solid #cccccc;
   box-sizing: border-box;
   border-radius: 6px;
-  color: white;
-  font-size: 19px;
+  color: #cccccc;
+  font-size: 16px;
   padding: 10px 10px;
 }
 
@@ -107,14 +117,15 @@
   top: 241px;
   background: #007bff;
   border-radius: 4px;
+  color: white;
 }
 
 .profile-title {
   position: absolute;
   width: 103px;
-  height: 42px;
+  height: 70px;
   left: 369px;
-  top: 110px;
+  top: 90px;
   color: white;
   font-style: normal;
   font-weight: normal;
@@ -125,11 +136,11 @@
 .users-title {
   position: absolute;
   width: 100px;
-  height: 40px;
+  height: 100px;
   left: 368px;
   top: 178px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 100;
   font-size: 18px;
   line-height: 21px;
   color: white;
@@ -145,7 +156,7 @@
   border: 2px solid #cccccc;
   box-sizing: border-box;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .profile-button {
@@ -156,11 +167,12 @@
   top: 282px;
   background: #007bff;
   border-radius: 4px;
+  color: white;
 }
 
 .tweet {
-  width:600px;
-  height:100px;
+  width: 600px;
+  height: 100px;
   left: 314px;
   top: 305px;
   position: relative;
@@ -168,8 +180,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
-  background: #343a40;;
+  align-items: flex-start;
+  background: #343a40;
   border-radius: 6px;
   color: white;
 }
@@ -180,13 +192,14 @@
   justify-content: space-between;
   background: #343a40;
   padding: 5px 10px;
+  color: #6c757d;
 }
 
 .tweet-message {
-  height:50px; 
+  height: 30px;
   width: 570px;
   text-align: left;
-  background: #343a40;;
+  background: #343a40;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -195,7 +208,7 @@
 }
 
 .grey {
-  background: #343a40;;
+  background: #343a40;
 }
 
 .current-profile {
@@ -205,6 +218,7 @@
   left: 370px;
   display: inline;
   font-size: 22px;
+  font-weight: 100;
 }
 
 .tooManyChars {
@@ -228,4 +242,3 @@
   color: green;
   font-size: 22px;
 }
-

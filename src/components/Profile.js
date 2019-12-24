@@ -24,7 +24,7 @@ class Profile extends React.Component {
       <div>
         <form>
           <h1 className="profile-title">Profile</h1>
-          <div className="users-title">User Name:</div>
+          <div className="users-title">User Name</div>
           <input
             className="profile-input"
             type="text"
