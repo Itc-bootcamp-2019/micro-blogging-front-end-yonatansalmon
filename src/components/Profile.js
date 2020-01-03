@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  Switch,
+  Link,
+  Route,
+  BrowserRouter as Router,
+  useParams
+} from "react-router-dom";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -22,23 +29,19 @@ class Profile extends React.Component {
   render() {
     return (
       <div>
-        <form>
-          <h1 className="profile-title">Profile</h1>
-          <div className="users-title">User Name</div>
-          <input
-            className="profile-input"
-            type="text"
-            onChange={this.handleProfileInput}
-            placeholder="Please choose a username.."
-            ></input>
-          <button
-            className="profile-button"
-            onClick={this.handleUsernameSubmit}
-          >
-            Save
-          </button>
-        </form>
-        <h3 className="current-profile">Current profile: <p className ="myCurrentProfile">{this.state.userName} </p> </h3>
+      <form>
+        <h1 className="profile-title">Profile</h1>
+        <div className="users-title">User Name</div>
+        <input
+          className="profile-input"
+          type="text"
+          onChange={this.handleProfileInput}
+        ></input>
+        <button className="profile-button" onClick={this.handleUsernameSubmit}>
+          Save
+        </button>
+      </form>
+      <h3 className="current-profile">Current profile: <p className ="myCurrentProfile">{this.state.userName} </p> </h3>
       </div>
     );
   }

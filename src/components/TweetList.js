@@ -1,5 +1,4 @@
 import React from "react";
-import MyContext from "../context/MyContext";
 
 class TweetList extends React.Component {
   constructor(props) {
@@ -7,22 +6,22 @@ class TweetList extends React.Component {
   }
 
   render() {
+    const { tweets } = this.props;
     return (
-      <MyContext.Consumer>
-        {({ tweets }) => (
-          <div>
-            {tweets.map(tweet => (
-              <div key={tweet.date + tweet.userName} className="tweet">
-                <div className="user-date">
-                  <div className="grey">{tweet.userName}</div>
-                  <div className="grey">{tweet.date}</div>
-                </div>
-                  <div className="tweet-message">{tweet.content}</div>             
+      <div>
+        {tweets.map(tweet => {
+          return (
+            <div className="tweet">
+              <div className="user-date">
+                <div  className="grey">{tweet.userName}</div>
+                <div  className="grey">{tweet.date}</div>
               </div>
-            ))}
-          </div>
-        )}
-      </MyContext.Consumer>
+              <br></br>
+              <div className="tweet-message">{tweet.content}</div>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }
