@@ -50,12 +50,12 @@ class App extends React.Component {
           <Navbar></Navbar>
           <Switch>
             <Route exact path="/">
-              <TextBox tweets={tweets} onHandleTweet={this.onHandleTweet} />
+              <TextBox onHandleTweet={this.onHandleTweet} />
               {loading && <div className="tweet">loading...</div>}
               {!loading && <TweetList tweets={tweets} />}
             </Route>
             <Route path="/profile">
-              <Profile onHandleTweet={this.onHandleTweet}></Profile>
+              <Profile ></Profile>
             </Route>
           </Switch>
           {!displayModal && (
